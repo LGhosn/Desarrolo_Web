@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe enojoyers</title>
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!-- Preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
 
 </head>
 <body>
@@ -47,7 +55,10 @@
         
             <article class="entrada">
                 <div> <!-- AGREGO DIV PARA POSIBLE BUG DE IMAGEN  -->
-                    <img src="img/blog1.jpg" alt="blog1">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img src="img/blog1.jpg" alt="blog1" loading="lazy">
+                    </picture>
                 </div>
                 <div>
                     <h4 class="no_margin">Tipos de Grano de Cafe</h4>
@@ -68,7 +79,10 @@
             <article class="entrada">
                 <div>
                     <!-- AGREGO DIV PARA POSIBLE BUG DE IMAGEN  -->
-                    <img src="img/blog2.jpg" alt="blog2">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img src="img/blog2.jpg" alt="blog1" loading="lazy">
+                    </picture>
                 </div>
                 <div>
                     <h4 class="no_margin">Tres Deliciosas Recetas de Cafe</h4>
@@ -94,7 +108,10 @@
             <article class="entrada">
                 <div>
                     <!-- AGREGO DIV PARA POSIBLE BUG DE IMAGEN  -->
-                    <img src="img/blog3.jpg" alt="blog3">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img src="img/blog3.jpg" alt="blog1" loading="lazy">
+                    </picture>
                 </div>
                 <div>
                     <h4 class="no_margin">Beneficios del Cafe</h4>
@@ -129,7 +146,7 @@
                     <p class="widget_curso_label">Precio: <span class="widget_curso_info">Gratis</span></p>
                     <p class="widget_curso_label">Cupo: <span class="widget_curso_info">20</span></p>
 
-                    <a href="entrada.html" class="boton boton_secundario">Mas Informacion</a>
+                    <a href="cursos.html" class="boton boton_secundario">Mas Informacion</a>
                 </li>
                 
                 <li class="widget_curso">
@@ -138,7 +155,7 @@
                     <p class="widget_curso_label">Precio: <span class="widget_curso_info">Gratis</span></p>
                     <p class="widget_curso_label">Cupo: <span class="widget_curso_info">20</span></p>
                     
-                    <a href="entrada.html" class="boton boton_secundario">Mas Informacion</a>
+                    <a href="cursos.html" class="boton boton_secundario">Mas Informacion</a>
                 </li>
             </ul>
             
@@ -161,5 +178,6 @@
         </div>
     </footer>
 
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
