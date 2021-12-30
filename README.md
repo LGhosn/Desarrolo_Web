@@ -1,5 +1,7 @@
 # Desarrollo web
 Curso de desarrollo web de Udemy
 
-Primera web: https://ghosnsweb.netlify.app/
-Segunda web: https://ghosnstore.netlify.app/
+Páginas web hechas:
+  - https://ghosnsweb.netlify.app/
+  - https://ghosnstore.netlify.app/
+  - https://ghosncafeenjoyer.netlify.app/
