@@ -1,0 +1,20 @@
+
+{
+    "empleados" : [
+        {
+            "id" : 1,
+            "nombre": "Lautaro",
+            "puesto" : "Programador"
+        },
+        {
+            "id" : 2,
+            "nombre": "Andres",
+            "puesto" : "Cocinero"
+        },
+        {
+            "id": 3,
+            "nombre": "Candela",
+            "puesto": "Programadora"
+        }
+    ]
+}

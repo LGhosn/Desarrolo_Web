@@ -13,6 +13,7 @@ const cadena = "Mesa que mas apluada Mesa";
 const cadena2 = String('Silla');
 const cadena3 = new String ("Cama");
 const cadena4 = "Viva \"Peron\"";
+const cadena5 = "20";
 
 // console.log(cadena.length);
 
@@ -27,6 +28,7 @@ const cadena4 = "Viva \"Peron\"";
 // console.log("viva", cadena4);
 // console.log(`viva: ${cadena4}`);
 
+// console.log(parseInt(cadena5));
 
 
 //Numeros
@@ -57,6 +59,7 @@ let minimo = Math.min(1,23,4,5,67,0);
 
 // console.log(random);
 // console.log(pi);
+// console.log(pi.toString());
 
 // console.log(redondeoNormal);
 // console.log(redondeoNormal2);
@@ -99,7 +102,7 @@ const teclado = {
     disponible : true
 };
 
-console.log(teclado);
+// console.log(teclado);
 // console.log(teclado.nombre);
 // console.log(teclado["precio"]);
 
@@ -128,7 +131,73 @@ const mouse = {
 const union = {... teclado, ...mouse}; //Para unir objetos
 // console.log(union);
 
+// Arrays
+const numeros = [10, 20, 30, 40, 50];
+// console.table(numeros);
+
+const meses = new Array("Enero", "Febrero", "Marzo");
+// console.table(meses);
+// console.log(meses.includes("Enero"));
+
+// numeros.forEach(num => console.log(num);)
+// const teclado = numeros.map( producto => producto.nombre);
 
 
+numeros.push(60, 70, 80); //agrega al final
+numeros.unshift(0); //agrega al principio
+const nuevoArreglo = [...meses, "Junio"]; //equivalente al push
+// console.table(numeros);
 
+numeros.pop(); //elimina el ultimo
+numeros.shift(); //elimina el primero
+numeros.splice(3, 1) //elimina a partir del elemento 3 los n elementos
+// console.table(numeros);
+
+const carrito = [    
+    { nombre: "monitor", precio: 20 },
+    { nombre: "cpu", precio: 30 },
+    { nombre: "gpu", precio: 50 },
+    { nombre: "mouse", precio: 10 },
+];
+
+let result = carrito.some(function(producto) {
+    return producto.nombre == "cpu";
+})
+// console.log(result);
+
+result = carrito.some(producto => producto.nombre == "auricular");
+// console.log(result);
+
+let sumaDelCarrito = carrito.reduce(function(total, producto) {
+    return total + producto.precio;
+}, 0);
+// console.log(sumaDelCarrito);
+
+sumaDelCarrito = carrito.reduce( (string, producto) => string + " " + producto.nombre, "nombres: ");
+// console.log(sumaDelCarrito);
+
+let impares = carrito.filter( function(producto) {
+    return (producto.precio % 2) != 0
+});
+// console.log(impares);
+
+
+const puntaje = "1000";
+if (puntaje == 1000) {
+    // console.log("no");
+}
+else if (puntaje === 1000) {
+    // console.log("si");
+}
+
+
+// This
+const reservacion = {
+    nombre : "Lionel",
+    apellido : "Messi",
+    total : 0,
+    informacion : function() {
+        console.log(`El cliente es ${this.nombre} ${this.apellido}`);
+    }
+}
 
