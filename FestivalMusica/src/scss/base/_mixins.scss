@@ -1,0 +1,37 @@
+// Mixin es una funcion que se puede reutilizar
+@use 'variables' as v;
+
+// @mixin heading($color: black, $border-radius: false) {
+//     text-transform: uppercase;
+//     font-size: 2.4rem;
+//     color: $color;
+//     letter-spacing: 1px; //espacio entre letras
+//     
+//     @if $border-radius {
+//         border-radius: 0.5rem;
+//     }
+// }
+
+@mixin telefono {
+    @media (min-width: v.$telefono) { // @media es para que se aplique solo en cierto tamaño de pantalla
+        @content; // @content es para que se aplique el contenido que se le pase
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) {
+        @content;
+    }
+}
