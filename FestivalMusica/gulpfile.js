@@ -58,13 +58,21 @@ function imagenes(cb) {
     cb();
 }
 
+function javascript(cb) {
+    src('src/js/**/*.js') // identificamos los archivos js
+        .pipe(dest('build/js')); // guardamos los archivos js    
+    cb();
+}
+
 function dev(cb) {
     watch('src/scss/**/*.scss', css); // Vigila los cambios en los archivos scss y ejecuta la tarea css
+    watch('src/js/**/*.js', javascript); // Vigila los cambios en los archivos js y ejecuta la tarea javascript
     cb();
 }
 
 exports.css = css;
+exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev); // Ejecuta las tareas en paralelo
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev); // Ejecuta las tareas en paralelo
