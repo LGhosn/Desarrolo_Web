@@ -5,3 +5,4 @@ Páginas web hechas:
   - https://ghosnsweb.netlify.app/
   - https://ghosnstore.netlify.app/
   - https://ghosncafeenjoyer.netlify.app/
+  - https://lollaghosn.netlify.app/
