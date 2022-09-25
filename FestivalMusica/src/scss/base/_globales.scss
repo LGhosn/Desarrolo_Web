@@ -3,6 +3,7 @@
 html {
     font-size: 62.5%; // 1rem = 10px
     box-sizing: border-box; // Para que todos los elementos tengan el mismo box-sizing
+    scroll-padding-top: 0rem; // Para que no se oculte el header al hacer scroll
 }
 
 *, *:before, *:after {
@@ -12,6 +13,13 @@ html {
 body {
     font-family: v.$fuente_pricipal;
     font-size: 1.6rem; // 16px
+
+    &.fijar-body {
+        overflow: hidden;
+    }
+    &.body-scroll {
+        padding-top: 8.6rem; // para que no haya un salto de linea al hacer scroll
+    }
 }
 
 p {
